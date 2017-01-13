@@ -1,0 +1,67 @@
+- var description="Rollin Test Suite";
+- var timetaken="20 minutes"
+- var Browser="chrome"
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='./css/report.css')
+    script(src="./scripts/report.js")
+  body
+    div
+      h1#title Automated Tests Report
+      table(cellspacing='0')
+        thead
+          tr
+            th Statistic Name
+            th Statistic Value
+        tbody
+          tr
+            td TestSuite Name
+            td #{name}
+          tr
+            td TestSuite Description
+            td #{description}
+          tr
+            td TestSuite Duration
+            td #{description}
+          tr
+            td TestSuite HostName
+            td #{Env}
+          tr
+            td TestSuite Browser
+            td #{Browser}
+          tr
+            td Total Tests Run
+            td #{total}
+          tr
+            td Total Tests Pass
+            td #{pass}
+          tr
+            td Total Tests Fail
+            td #{fail}
+          tr
+            td Random message
+            td #{company}
+    table(cellspacing='0')
+        thead
+          tr
+            th S NO
+            th Test Case Name
+            th Test Case Description
+            th Result
+            th Detail(...)
+        tbody
+          tr
+            td 1
+            td TestCase Name
+            td #{name}
+            td pass
+            td: a(href="#") link
+        for testCaseList in testCaseListTotal
+          tr
+            td #{testCaseList.testCaseID}
+            td #{testCaseList.testName}
+            td #{testCaseList.testDescription}
+            td #{testCaseList.result}
+            td: a(href="#") #{testCaseList.link}

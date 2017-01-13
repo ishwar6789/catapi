@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Testing of the infoQ website]">
+  <test name="order">
+    <groups>
+      <run>
+        <include name="infoq"/>
+      </run>
+    </groups>
+    <packages>
+      <package name="endtoendtestsInfoQ"/>
+    </packages>
+    <classes>
+      <class name="endtoendtestsInfoQ.InfoQLogin"/>
+      <class name="endtoendtestsInfoQ.InfoqNavigation"/>
+      <class name="endtoendtestsInfoQ.InfoQNavigationTest"/>
+      <class name="endtoendtestsInfoQ.InfoqSearch"/>
+      <class name="endtoendtestsInfoQ.TestBase"/>
+    </classes>
+  </test> <!-- order -->
+  <test name="order(failed)">
+    <groups>
+      <run>
+        <include name="infoq"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="endtoendtestsInfoQ.InfoQNavigationTest">
+        <methods>
+          <include name="loginInfoQClickTest"/>
+          <include name="quitDriver"/>
+          <include name="initDriver"/>
+          <include name="setupSuite"/>
+          <include name="setupTests"/>
+        </methods>
+      </class> <!-- endtoendtestsInfoQ.InfoQNavigationTest -->
+    </classes>
+  </test> <!-- order(failed) -->
+</suite> <!-- Failed suite [Testing of the infoQ website] -->

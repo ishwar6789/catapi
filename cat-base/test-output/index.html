@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />  
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <br/>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
+          <img class="collapse-all-icon" src="collapseall.gif">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" class="navigator-link" panel-name="suite-Testing_of_the_infoQ_website">
+              <span class="suite-name border-failed">Testing of the infoQ website</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="test-xml-Testing_of_the_infoQ_website">
+                    <span>C:\Users\HarikaAkshay\workspaceGitProject\cat-parent\cat-base\testng.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="testlist-Testing_of_the_infoQ_website">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="group-Testing_of_the_infoQ_website">
+                    <span>4 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="times-Testing_of_the_infoQ_website">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="reporter-Testing_of_the_infoQ_website">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-Testing_of_the_infoQ_website">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="chronological-Testing_of_the_infoQ_website">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">5 methods, 1 failed,   4 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Testing_of_the_infoQ_website" class="hide-methods failed suite-Testing_of_the_infoQ_website"> (hide)</a> <!-- hide-methods failed suite-Testing_of_the_infoQ_website -->
+                      <a href="#" panel-name="suite-Testing_of_the_infoQ_website" class="show-methods failed suite-Testing_of_the_infoQ_website"> (show)</a> <!-- show-methods failed suite-Testing_of_the_infoQ_website -->
+                    </span>
+                    <div class="method-list-content failed suite-Testing_of_the_infoQ_website">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Testing_of_the_infoQ_website" title="endtoendtestsInfoQ.InfoQNavigationTest" hash-for-method="loginInfoQClickTest">loginInfoQClickTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Testing_of_the_infoQ_website -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Testing_of_the_infoQ_website" class="hide-methods passed suite-Testing_of_the_infoQ_website"> (hide)</a> <!-- hide-methods passed suite-Testing_of_the_infoQ_website -->
+                      <a href="#" panel-name="suite-Testing_of_the_infoQ_website" class="show-methods passed suite-Testing_of_the_infoQ_website"> (show)</a> <!-- show-methods passed suite-Testing_of_the_infoQ_website -->
+                    </span>
+                    <div class="method-list-content passed suite-Testing_of_the_infoQ_website">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Testing_of_the_infoQ_website" title="endtoendtestsInfoQ.InfoQNavigationTest" hash-for-method="loginInfoQ">loginInfoQ</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Testing_of_the_infoQ_website" title="endtoendtestsInfoQ.InfoQNavigationTest" hash-for-method="navigatetoInfoQ">navigatetoInfoQ</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Testing_of_the_infoQ_website" title="endtoendtestsInfoQ.InfoQNavigationTest" hash-for-method="repeatnavigatetoInfoQ">repeatnavigatetoInfoQ</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Testing_of_the_infoQ_website" title="endtoendtestsInfoQ.InfoQNavigationTest" hash-for-method="searchInfoQ">searchInfoQ</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Testing_of_the_infoQ_website -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-Testing_of_the_infoQ_website" class="panel Testing_of_the_infoQ_website">
+          <div class="suite-Testing_of_the_infoQ_website-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">endtoendtestsInfoQ.InfoQNavigationTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginInfoQClickTest">
+                  </a> <!-- loginInfoQClickTest -->
+                  <span class="method-name">loginInfoQClickTest</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Timed out after 30 seconds waiting for element to be clickable: By.cssSelector: #keyword
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;DESKTOP-IIAEGH5&apos;, ip: &apos;192.168.1.103&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_77&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9), userDataDir=C:\Users\HARIKA~1\AppData\Local\Temp\scoped_dir12576_26001}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=55.0.2883.87, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: a938d393d24fedb2a5bdadf8a3588ee8
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:261)
+	at com.catapi.uiextensions.SeleniumExtensions.waitforCondition(SeleniumExtensions.java:62)
+	at com.catapi.uiextensions.SeleniumExtensions.getElement(SeleniumExtensions.java:35)
+	at com.catapi.uiextensions.ClickElement.onObject(ClickElement.java:15)
+	at endtoendtestsInfoQ.InfoQNavigationTest.loginInfoQClickTest(InfoQNavigationTest.java:53)
+... Removed 24 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Testing_of_the_infoQ_website-class-failed -->
+          <div class="suite-Testing_of_the_infoQ_website-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">endtoendtestsInfoQ.InfoQNavigationTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginInfoQ">
+                  </a> <!-- loginInfoQ -->
+                  <span class="method-name">loginInfoQ</span>
+                  <em>
+(loginfo test class)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="navigatetoInfoQ">
+                  </a> <!-- navigatetoInfoQ -->
+                  <span class="method-name">navigatetoInfoQ</span>
+                  <em>
+(navigatieon test class)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="repeatnavigatetoInfoQ">
+                  </a> <!-- repeatnavigatetoInfoQ -->
+                  <span class="method-name">repeatnavigatetoInfoQ</span>
+                  <em>
+(navigatieon test class)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="searchInfoQ">
+                  </a> <!-- searchInfoQ -->
+                  <span class="method-name">searchInfoQ</span>
+                  <em>
+(search info test class)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Testing_of_the_infoQ_website-class-passed -->
+        </div> <!-- panel Testing_of_the_infoQ_website -->
+        <div panel-name="test-xml-Testing_of_the_infoQ_website" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">C:\Users\HarikaAkshay\workspaceGitProject\cat-parent\cat-base\testng.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Testing of the infoQ website&quot;&gt;
+  &lt;test name=&quot;order&quot;&gt;
+    &lt;groups&gt;
+      &lt;run&gt;
+        &lt;include name=&quot;infoq&quot;/&gt;
+      &lt;/run&gt;
+    &lt;/groups&gt;
+    &lt;packages&gt;
+      &lt;package name=&quot;endtoendtestsInfoQ&quot;/&gt;
+    &lt;/packages&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;endtoendtestsInfoQ.InfoQLogin&quot;/&gt;
+      &lt;class name=&quot;endtoendtestsInfoQ.InfoqNavigation&quot;/&gt;
+      &lt;class name=&quot;endtoendtestsInfoQ.InfoQNavigationTest&quot;/&gt;
+      &lt;class name=&quot;endtoendtestsInfoQ.InfoqSearch&quot;/&gt;
+      &lt;class name=&quot;endtoendtestsInfoQ.TestBase&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- order --&gt;
+&lt;/suite&gt; &lt;!-- Testing of the infoQ website --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-Testing_of_the_infoQ_website" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Testing of the infoQ website</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">order (5 classes)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Testing_of_the_infoQ_website" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Testing of the infoQ website</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="test-group">
+              <span class="test-group-name">infoq</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">loginInfoQ</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">loginInfoQClickTest</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">navigatetoInfoQ</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">repeatnavigatetoInfoQ</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">searchInfoQ</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">infoq1</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">navigatetoInfoQ</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">repeatnavigatetoInfoQ</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">infoq2</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">loginInfoQ</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">searchInfoQ</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">infoq3</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">loginInfoQClickTest</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-Testing_of_the_infoQ_website" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Testing of the infoQ website</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_Testing_of_the_infoQ_website');
+function tableData_Testing_of_the_infoQ_website() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(5);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'navigatetoInfoQ')
+data.setCell(0, 2, 'endtoendtestsInfoQ.InfoQNavigationTest')
+data.setCell(0, 3, 47332);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'loginInfoQClickTest')
+data.setCell(1, 2, 'endtoendtestsInfoQ.InfoQNavigationTest')
+data.setCell(1, 3, 31053);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'repeatnavigatetoInfoQ')
+data.setCell(2, 2, 'endtoendtestsInfoQ.InfoQNavigationTest')
+data.setCell(2, 3, 18342);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'loginInfoQ')
+data.setCell(3, 2, 'endtoendtestsInfoQ.InfoQNavigationTest')
+data.setCell(3, 3, 1527);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'searchInfoQ')
+data.setCell(4, 2, 'endtoendtestsInfoQ.InfoQNavigationTest')
+data.setCell(4, 3, 760);
+window.suiteTableData['Testing_of_the_infoQ_website']= { tableData: data, tableDiv: 'times-div-Testing_of_the_infoQ_website'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <div id="times-div-Testing_of_the_infoQ_website">
+              </div> <!-- times-div-Testing_of_the_infoQ_website -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Testing_of_the_infoQ_website" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Testing of the infoQ website</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-Testing_of_the_infoQ_website" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">4 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">endtoendtestsInfoQ.TestBase</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">quitDriver</span>
+                <br/>
+                <span class="ignored-method-name">initDriver</span>
+                <br/>
+                <span class="ignored-method-name">setupSuite</span>
+                <br/>
+                <span class="ignored-method-name">setupTests</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Testing_of_the_infoQ_website" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">endtoendtestsInfoQ.InfoQNavigationTest</div> <!-- chronological-class-name -->
+              <div class="configuration-suite before">
+                <span class="method-name">setupSuite</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-suite before -->
+              <div class="configuration-test before">
+                <span class="method-name">initDriver(null)</span>
+                <span class="method-start">125 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="configuration-test before">
+                <span class="method-name">setupTests</span>
+                <span class="method-start">9914 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="test-method">
+                <span class="method-name">loginInfoQ</span>
+                <span class="method-start">50958 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">loginInfoQClickTest</span>
+                <span class="method-start">53523 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">navigatetoInfoQ</span>
+                <span class="method-start">85029 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">repeatnavigatetoInfoQ</span>
+                <span class="method-start">132519 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">searchInfoQ</span>
+                <span class="method-start">150977 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-test after">
+                <span class="method-name">quitDriver</span>
+                <span class="method-start">151938 ms</span>
+              </div> <!-- configuration-test after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+</html>

@@ -1,0 +1,21 @@
+-var index=0;
+doctype html
+html
+  head
+    title Test Cases
+    link(rel='stylesheet', href='./css/report.css')
+    script(src="./scripts/report.js")
+  body
+    div
+      h1#title Test Execution Step by Step
+      table(cellspacing='0')
+        thead
+          tr
+            th Step Number
+            th Step Description
+        tbody
+        each testCaseList in testCasesteps
+          - index++;
+          tr
+            td #{index}
+            td #{testCaseList}

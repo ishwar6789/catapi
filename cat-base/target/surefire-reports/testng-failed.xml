@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [TestAll]">
+  <test name="order">
+    <groups>
+      <run>
+        <include name="factory123"/>
+      </run>
+    </groups>
+    <packages>
+      <package name="cat.unittests"/>
+    </packages>
+    <classes>
+      <class name="cat.unittests.BrowserFactoryTest"/>
+      <class name="cat.unittests.DriverSetupTests"/>
+      <class name="cat.unittests.FrameworkTest"/>
+    </classes>
+  </test> <!-- order -->
+</suite> <!-- Failed suite [TestAll] -->

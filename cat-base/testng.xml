@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Testing of the infoQ website">
+	<test name="order">
+		<groups>
+			<run>
+				<include name="infoq" />
+			</run>
+		</groups>
+
+		<packages>
+			<package name="endtoendtestsInfoQ" />
+		</packages>
+	</test>
+</suite>
