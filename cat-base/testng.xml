@@ -3,7 +3,7 @@
 	<test name="order">
 		<groups>
 			<run>
-				<include name="infoq" />
+				<include name="infoq111" />
 			</run>
 		</groups>
 

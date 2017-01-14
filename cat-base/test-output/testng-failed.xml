@@ -4,7 +4,7 @@
   <test name="order">
     <groups>
       <run>
-        <include name="infoq"/>
+        <include name="infoq111"/>
       </run>
     </groups>
     <packages>
@@ -18,22 +18,4 @@
       <class name="endtoendtestsInfoQ.TestBase"/>
     </classes>
   </test> <!-- order -->
-  <test name="order(failed)">
-    <groups>
-      <run>
-        <include name="infoq"/>
-      </run>
-    </groups>
-    <classes>
-      <class name="endtoendtestsInfoQ.InfoQNavigationTest">
-        <methods>
-          <include name="loginInfoQClickTest"/>
-          <include name="quitDriver"/>
-          <include name="initDriver"/>
-          <include name="setupSuite"/>
-          <include name="setupTests"/>
-        </methods>
-      </class> <!-- endtoendtestsInfoQ.InfoQNavigationTest -->
-    </classes>
-  </test> <!-- order(failed) -->
 </suite> <!-- Failed suite [Testing of the infoQ website] -->

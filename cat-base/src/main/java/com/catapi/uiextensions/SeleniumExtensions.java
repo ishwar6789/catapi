@@ -25,14 +25,14 @@ public class SeleniumExtensions {
 	 * 
 	 * @param selector
 	 * @param timeoutSeconds
-	 * @param ec
+	 * @param expectedCondition (@optional)
 	 * @return
 	 */
-	public static WebElement getElement(By selector, int timeoutSeconds, ExpectedCondition<WebElement> ec){
-		if(ec == null){
+	public static WebElement getElement(By selector, int timeoutSeconds, ExpectedCondition<WebElement> expectedCondition){
+		if(expectedCondition == null){
 			return FrameworkAssignment.getDriver().findElement(selector);
 		}else{
-			return (WebElement)waitforCondition(ec,timeoutSeconds);
+			return (WebElement)waitforCondition(expectedCondition,timeoutSeconds);
 		}
 	}
 	
@@ -75,6 +75,12 @@ public class SeleniumExtensions {
 		
 		Object results1 = ((JavascriptExecutor) FrameworkAssignment.getDriver()).executeScript(script, element);
 		System.out.println("Results: "+results1);
+	}
+	
+	public static void scrollintoView(By byselector){
+		JSExtensions.scrollintoView(byselector);
+		
+		
 	}
 	
 		

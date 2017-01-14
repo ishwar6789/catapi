@@ -1,26 +1,34 @@
 package endtoendtestsInfoQ;
 
 import org.openqa.selenium.By;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.catapi.reporting.ReportMethodListener;
 import com.catapi.uiextensions.ClickElement;
+import com.catapi.uiextensions.JSExtensions;
 import com.catapi.uiextensions.SeleniumExtensions;
 
 import cat.utilities.JqueryUtilites;
 
 
 public class InfoQNavigationTest extends TestBase {
+	
+	@Test(groups={"infoq","infoq111"},description="scroll test class")
+	public void checkScrolling(){
+		//scroll bar check
+		Assert.assertTrue(InfoqNavigation.scrollTo(InfoqNavigation.FOOTER));
+		JSExtensions.scrolltoHome();
+	}
 		
-	@Test(groups={"infoq","infoq1"},description="navigatieon test class")
+	@Test(groups={"infoq","infoq111"},description="navigatieon test class")
 	public void navigatetoInfoQ(){		
 		System.out.println("NavigationTests");
 		InfoqNavigation.toLink(InfoqNavigation.CONTAINERS);
-		
 		//InfoqNavigation.toLink("failed");
 		InfoqNavigation.toLink(InfoqNavigation.MICROSERVICES);
 		InfoqNavigation.toLink(InfoqNavigation.REACTIVE);
-		InfoqNavigation.toLink(InfoqNavigation.STREAMING);
+		//InfoqNavigation.toLink(InfoqNavigation.STREAMING);
 	}
 	@Test(groups={"infoq","infoq1"},description="navigatieon test class")
 	public void repeatnavigatetoInfoQ(){		
