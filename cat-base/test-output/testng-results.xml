@@ -2,7 +2,7 @@
 <testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Testing of the infoQ website" duration-ms="25138" started-at="2017-01-15T08:40:10Z" finished-at="2017-01-15T08:40:35Z">
+  <suite name="Testing of the infoQ website" duration-ms="58905" started-at="2017-01-15T09:09:01Z" finished-at="2017-01-15T09:10:00Z">
     <groups>
       <group name="infoq">
         <method signature="InfoQNavigationTest.checkScrolling()[pri:0, instance:endtoendtestsInfoQ.InfoQNavigationTest@f6c48ac]" name="checkScrolling" class="endtoendtestsInfoQ.InfoQNavigationTest"/>
@@ -13,13 +13,13 @@
         <method signature="InfoQNavigationTest.navigatetoInfoQ()[pri:0, instance:endtoendtestsInfoQ.InfoQNavigationTest@f6c48ac]" name="navigatetoInfoQ" class="endtoendtestsInfoQ.InfoQNavigationTest"/>
       </group> <!-- infoq111 -->
     </groups>
-    <test name="order" duration-ms="25138" started-at="2017-01-15T08:40:10Z" finished-at="2017-01-15T08:40:35Z">
+    <test name="order" duration-ms="58905" started-at="2017-01-15T09:09:01Z" finished-at="2017-01-15T09:10:00Z">
       <class name="endtoendtestsInfoQ.InfoQNavigationTest">
-        <test-method status="PASS" signature="setupSuite()[pri:0, instance:endtoendtestsInfoQ.InfoQNavigationTest@f6c48ac]" name="setupSuite" is-config="true" duration-ms="12" started-at="2017-01-15T14:10:10Z" finished-at="2017-01-15T14:10:10Z">
+        <test-method status="PASS" signature="setupSuite()[pri:0, instance:endtoendtestsInfoQ.InfoQNavigationTest@f6c48ac]" name="setupSuite" is-config="true" duration-ms="15" started-at="2017-01-15T14:39:01Z" finished-at="2017-01-15T14:39:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupSuite -->
-        <test-method status="PASS" signature="initDriver([Ljava.lang.Object;)[pri:0, instance:endtoendtestsInfoQ.InfoQNavigationTest@f6c48ac]" name="initDriver" is-config="true" duration-ms="4496" started-at="2017-01-15T14:10:10Z" finished-at="2017-01-15T14:10:15Z">
+        <test-method status="PASS" signature="initDriver([Ljava.lang.Object;)[pri:0, instance:endtoendtestsInfoQ.InfoQNavigationTest@f6c48ac]" name="initDriver" is-config="true" duration-ms="13938" started-at="2017-01-15T14:39:01Z" finished-at="2017-01-15T14:39:15Z">
           <params>
             <param index="0">
               <value is-null="true"/>
@@ -28,19 +28,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initDriver -->
-        <test-method status="PASS" signature="setupTests()[pri:0, instance:endtoendtestsInfoQ.InfoQNavigationTest@f6c48ac]" name="setupTests" is-config="true" duration-ms="5429" started-at="2017-01-15T14:10:15Z" depends-on-methods="com.catapi.core.CatBaseTestCase.initDriver" finished-at="2017-01-15T14:10:20Z">
+        <test-method status="PASS" signature="setupTests()[pri:0, instance:endtoendtestsInfoQ.InfoQNavigationTest@f6c48ac]" name="setupTests" is-config="true" duration-ms="13087" started-at="2017-01-15T14:39:15Z" depends-on-methods="com.catapi.core.CatBaseTestCase.initDriver" finished-at="2017-01-15T14:39:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupTests -->
-        <test-method status="PASS" signature="checkScrolling()[pri:0, instance:endtoendtestsInfoQ.InfoQNavigationTest@f6c48ac]" name="checkScrolling" duration-ms="1523" started-at="2017-01-15T14:10:20Z" description="scroll test class" finished-at="2017-01-15T14:10:22Z">
+        <test-method status="PASS" signature="checkScrolling()[pri:0, instance:endtoendtestsInfoQ.InfoQNavigationTest@f6c48ac]" name="checkScrolling" duration-ms="3097" started-at="2017-01-15T14:39:28Z" description="scroll test class" finished-at="2017-01-15T14:39:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkScrolling -->
-        <test-method status="PASS" signature="navigatetoInfoQ()[pri:0, instance:endtoendtestsInfoQ.InfoQNavigationTest@f6c48ac]" name="navigatetoInfoQ" duration-ms="12029" started-at="2017-01-15T14:10:22Z" description="navigatieon test class" finished-at="2017-01-15T14:10:34Z">
+        <test-method status="PASS" signature="navigatetoInfoQ()[pri:0, instance:endtoendtestsInfoQ.InfoQNavigationTest@f6c48ac]" name="navigatetoInfoQ" duration-ms="23542" started-at="2017-01-15T14:39:32Z" description="navigatieon test class" finished-at="2017-01-15T14:39:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- navigatetoInfoQ -->
-        <test-method status="PASS" signature="quitDriver()[pri:0, instance:endtoendtestsInfoQ.InfoQNavigationTest@f6c48ac]" name="quitDriver" is-config="true" duration-ms="1159" started-at="2017-01-15T14:10:34Z" finished-at="2017-01-15T14:10:35Z">
+        <test-method status="PASS" signature="quitDriver()[pri:0, instance:endtoendtestsInfoQ.InfoQNavigationTest@f6c48ac]" name="quitDriver" is-config="true" duration-ms="3785" started-at="2017-01-15T14:39:56Z" finished-at="2017-01-15T14:40:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitDriver -->

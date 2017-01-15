@@ -26,9 +26,12 @@ public class InfoQNavigationTest extends TestBase {
 	public void navigatetoInfoQ(){		
 		System.out.println("NavigationTests");
 		InfoqNavigation.toLink(InfoqNavigation.CONTAINERS);
+		SeleniumExtensions.logandgrabScreenshot("Containers");
 		//InfoqNavigation.toLink("failed");
 		InfoqNavigation.toLink(InfoqNavigation.MICROSERVICES);
+		SeleniumExtensions.logandgrabScreenshot("Micrsoservices");
 		InfoqNavigation.toLink(InfoqNavigation.REACTIVE);
+		SeleniumExtensions.logandgrabScreenshot("Reactive");
 		//InfoqNavigation.toLink(InfoqNavigation.STREAMING);
 	}
 	@Test(groups={"infoq","infoq1"},description="navigatieon test class")
