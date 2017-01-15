@@ -51,17 +51,11 @@ html
             th Test Case Description
             th Result
             th Detail(...)
-        tbody
-          tr
-            td 1
-            td TestCase Name
-            td #{name}
-            td pass
-            td: a(href="#") link
+        tbody          
         for testCaseList in testCaseListTotal
           tr
             td #{testCaseList.testCaseID}
             td #{testCaseList.testName}
             td #{testCaseList.testDescription}
             td #{testCaseList.result}
-            td: a(href="#") #{testCaseList.link}
+            td: a(href="./#{testCaseList.link}") #{testCaseList.link}

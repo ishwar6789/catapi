@@ -13,9 +13,11 @@ html
           tr
             th Step Number
             th Step Description
+            th links
         tbody
         each testCaseList in testCasesteps
           - index++;
           tr
             td #{index}
-            td #{testCaseList}
+            td #{testCaseList.message}
+            td: a(href="./#{testCaseList.link}")  #{testCaseList.link}

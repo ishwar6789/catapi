@@ -17,6 +17,7 @@ public class InfoQNavigationTest extends TestBase {
 	@Test(groups={"infoq","infoq111"},description="scroll test class")
 	public void checkScrolling(){
 		//scroll bar check
+		SeleniumExtensions.logandgrabScreenshot("Testing screenshot");
 		Assert.assertTrue(InfoqNavigation.scrollTo(InfoqNavigation.FOOTER));
 		JSExtensions.scrolltoHome();
 	}

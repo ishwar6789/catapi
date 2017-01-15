@@ -1,7 +1,16 @@
 package com.catapi.uiextensions;
+import java.io.File;
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Random;
+
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
@@ -13,12 +22,38 @@ import com.catapi.reporting.ReportMethodListener;
 public class SeleniumExtensions {
 	
 	
-	public static void logandgrabScreenshot(String message){logMessages(message,true);}
-	public static void log(String message){logMessages(message,false);}
+	public static void logandgrabScreenshot(String message){
+		try{
+		logMessages(message,true);}
+		catch(IOException e){}
+	}
+	public static void log(String message){
+			try {
+				logMessages(message,false);
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
 	
-	static void logMessages(String message, boolean takescreenshot){
-		if(takescreenshot){}
-		ReportMethodListener.testSteps.add(message);		
+	static void logMessages(String message, boolean takescreenshot) throws IOException{
+		HashMap<String, String> teststeps = new HashMap<>();
+		teststeps.put("message", message);
+		if(takescreenshot){
+			
+			WebDriver driver =FrameworkAssignment.getDriver();
+			Random random = new Random();
+			
+			int first = random.ints(1000, 10000000).findAny().getAsInt();
+			
+			String fileName ="report//resultestCase"+first+".jpg";
+			File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);  
+            FileUtils.copyFile(scrFile, new File(fileName));
+            teststeps.put("link", "./resultestCase"+first+".jpg");
+            ReportMethodListener.testSteps.add(teststeps);
+            return;
+		}
+		ReportMethodListener.testSteps.add(teststeps);		
 	}
 		
 	/**

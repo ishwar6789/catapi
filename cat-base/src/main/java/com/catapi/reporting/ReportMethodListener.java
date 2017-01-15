@@ -22,7 +22,7 @@ import de.neuland.jade4j.template.JadeTemplate;
 
 public class ReportMethodListener implements IInvokedMethodListener, ITestListener, ISuiteListener {
 	public static int testCaseCount = 0;
-	public static List<String> testSteps = new LinkedList<>();
+	public static List<Object> testSteps = new LinkedList<>();
 
 	@Override
 	public void beforeInvocation(IInvokedMethod method, ITestResult testResult) {
@@ -30,7 +30,8 @@ public class ReportMethodListener implements IInvokedMethodListener, ITestListen
 
 	@Override
 	public void afterInvocation(IInvokedMethod method, ITestResult testResult) {
-
+		
+		
 		if (method.getTestMethod().isTest()) {
 			testCaseCount++;
 			Map<String, Object> model = new HashMap<String, Object>();
@@ -46,6 +47,17 @@ public class ReportMethodListener implements IInvokedMethodListener, ITestListen
 				FileUtils.copyDirectory(
 						new File(getClass().getClassLoader().getResource("templates//scripts").getPath()),
 						new File("report//scripts"));
+				///
+				String result =testResult.isSuccess()?"true":"false";
+				
+				HashMap<String, String> testCaseDetails2 = new HashMap<>();
+				testCaseDetails2.put("testCaseID", String.valueOf(testCaseCount));
+				testCaseDetails2.put("testName", testResult.getName());
+				testCaseDetails2.put("testDescription", method.getTestMethod().getDescription() );
+				testCaseDetails2.put("result", result);
+				testCaseDetails2.put("link", "resultestCase" + testCaseCount + "s.html");
+				
+				ReportListen.totalList.add(testCaseDetails2);
 
 			} catch (IOException e) {
 				e.printStackTrace();
@@ -81,14 +93,7 @@ public class ReportMethodListener implements IInvokedMethodListener, ITestListen
 
 	@Override
 	public void onFinish(ITestContext context) {
-		testCaseCount++;
-		HashMap<String, String> testCaseDetails2 = new HashMap<>();
-		testCaseDetails2.put("testCaseID", String.valueOf(testCaseCount));
-		testCaseDetails2.put("testName", context.getName());
-		testCaseDetails2.put("testDescription", "Describe the test case");
-		testCaseDetails2.put("result", "pass");
-		testCaseDetails2.put("link", "linktogalen");
-		ReportListen.totalList.add(testCaseDetails2);
+		
 	}
 
 	@Override
